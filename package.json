@@ -1,0 +1,11 @@
+{
+  "name": "Dd",
+  "version": "1.0.0",
+  "description": "Write an app that:",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js ./*-test.js"
+  },
+  "author": "Kwarus",
+  "license": "ISC"
+}
