@@ -1,13 +1,16 @@
-var customReadFile = require('./helpers/customFileReader.js').customFileReader;
-var getNewStringArr = require('./helpers/getNewStringArr.js').getNewStringArr;
+var sortTextFiles = require('./helpers/sortTxtFiles.js').sortTxtFiles;
 
-// Read File Contents
-const ppleByDollar = customReadFile('fixtures/people_by_dollar.txt');
-const ppleByPercent = customReadFile('fixtures/people_by_percent.txt');
 
-const _ppleByDollar = getNewStringArr(ppleByDollar, '$');
-const _ppleByPercent = getNewStringArr(ppleByPercent, '%');
+// define file paths and delimeters as array of objects
+var files = [
+    {
+        delimeter: '$',
+        filepath: './fixtures/people_by_dollar.txt'
+    },
+    {
+        delimeter: '%',
+        filepath: './fixtures/people_by_percent.txt'
+    },
+];
 
-const finalDat = _ppleByDollar.concat(_ppleByPercent);
-
-console.log(finalDat.sort());
+console.log(sortTextFiles(files));
