@@ -12,6 +12,8 @@ const mergeData = async (fileA, fileB) =>{
     // strip first input
     const convertedInputA = await convertInput(loadInputA, '$');
 
+    console.log('loaded input: ', loadInputA)
+    console.log('converted input: ', convertedInputA)
     // strip second input
     const convertedInputB = await convertInput(loadInputB, '%');
 
